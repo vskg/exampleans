@@ -1,6 +1,6 @@
-- - -
+---
 - hosts: all
   become: yes
   tasks:
-  - name: i am pinging
+  - name: i am pinging to all 
     ping:
