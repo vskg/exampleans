@@ -15,13 +15,13 @@
      when: ansible_os_family =="Debian" 
 
    - name: install webserver on amazon
-     apt:
+     yum:
        name:
         state: present
      when: ansible_os_family =="RedHat"
    
    - name: install webserver on amazon
-     apt:
+     yum:
       name: httpd
       state: started
      when: ansible_os_family =="RedHat"    
