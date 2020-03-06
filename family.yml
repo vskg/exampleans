@@ -16,8 +16,8 @@
 
    - name: install webserver on amazon
      yum:
-       name: "{{ webserveronamazon }}"
-        state: present
+      name: "{{ webserveronamazon }}"
+      state: present
      when: ansible_os_family =="RedHat"
    
    - name: install webserver on amazon
