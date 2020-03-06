@@ -3,25 +3,25 @@
   become: yes
   tasks:
    - name: install webserver on ubuntu
-     apt:
-      name:
+     apt:  
+      name: "{{ webserveronUbuntu }}"
       state: present
      when: ansible_os_family =="Debian" 
 
    - name: start webserver on ubuntu
      service:
-      name: apache2
+      name: "{{ webserveronUbuntu }}"
       state: started
      when: ansible_os_family =="Debian" 
 
    - name: install webserver on amazon
      yum:
-       name:
+       name: "{{ webserveronamazon }}"
         state: present
      when: ansible_os_family =="RedHat"
    
    - name: install webserver on amazon
      service:
-      name: httpd
+      name: "{{ webserveronamazon }}"
       state: started
      when: ansible_os_family =="RedHat"    
