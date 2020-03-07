@@ -7,7 +7,7 @@
 
 - name:  copy my tom config file into nodes
   template:
-    src: templates/mytomconfig.j2
+    src: templates/tomconfig.j2
     dest: /etc/default/tomcat7
   notify: restarttomcat
 
